@@ -24,7 +24,9 @@ public class API {
 
         HttpServer server;
 		try {
-			server = HttpServer.create(new InetSocketAddress(3000), 0);// creates server connection on port 3000
+			int port = 3000;
+			server = HttpServer.create(new InetSocketAddress(port), 0);// creates server connection on port 3000
+			System.out.println("Server started on port "+ port);
 		} catch (IOException e) {
 			System.err.println("Couldn't start server");
 			return;
